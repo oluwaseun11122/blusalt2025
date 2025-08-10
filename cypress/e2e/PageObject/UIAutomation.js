@@ -130,7 +130,7 @@ it('uses visitWithDialogStubs', () => {
     .should('exist')
     .then($el => {
       // If #browse is an <input type="file">, attachFile will work directly:
-      cy.wrap($el).attachFile(fileName);
+      cy.wrap($el).attachFile(fileName, { allowEmpty: true });
     });
 }
  
